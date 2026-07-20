@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🚌 Driver Mode — Share GPS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🚌 Driver Mode</h1>
+    <nav>
+      <a href="/index.html">Passenger View →</a>
+    </nav>
+  </header>
+
+  <div class="driver-container">
+    <label for="busId">Bus ID</label>
+    <input type="text" id="busId" placeholder="e.g. Bus-3" />
+
+    <button id="toggleBtn">Start Sharing My GPS Location</button>
+
+    <div id="driverStatus">Enter a Bus ID and press the button to begin sharing your live location.</div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="driver.js"></script>
+</body>
+</html>

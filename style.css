@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: #111827;
+  border-bottom: 1px solid #1f2937;
+}
+
+header h1 {
+  font-size: 18px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+nav a {
+  color: #93c5fd;
+  text-decoration: none;
+  font-size: 14px;
+  margin-left: 16px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+#map {
+  width: 100%;
+  height: calc(100vh - 56px);
+}
+
+.status-bar {
+  position: absolute;
+  top: 70px;
+  right: 16px;
+  z-index: 1000;
+  background: rgba(17, 24, 39, 0.92);
+  border: 1px solid #1f2937;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 13px;
+  min-width: 160px;
+}
+
+.status-bar h3 {
+  margin: 0 0 6px 0;
+  font-size: 13px;
+  color: #93c5fd;
+}
+
+.bus-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 0;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #22c55e;
+  flex-shrink: 0;
+}
+
+.dot.stale {
+  background: #ef4444;
+}
+
+/* Driver page */
+.driver-container {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 14px;
+}
+
+.driver-container label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #93c5fd;
+}
+
+.driver-container input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #374151;
+  background: #0f172a;
+  color: #e2e8f0;
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+
+.driver-container button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.driver-container button:hover {
+  background: #1d4ed8;
+}
+
+.driver-container button.sharing {
+  background: #dc2626;
+}
+
+.driver-container button.sharing:hover {
+  background: #b91c1c;
+}
+
+#driverStatus {
+  margin-top: 16px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #94a3b8;
+  white-space: pre-line;
+}
+
+#driverStatus.error {
+  color: #f87171;
+}
+
+#driverStatus.ok {
+  color: #4ade80;
+}
